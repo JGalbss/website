@@ -19,7 +19,7 @@ module.exports = {
   importOrderCaseInsensitive: true,
   plugins: [
     '@trivago/prettier-plugin-sort-imports',
-    require('prettier-plugin-tailwindcss'),
-    require('windy-radix-palette'),
+    'prettier-plugin-tailwindcss',
+    'windy-radix-palette',
   ],
 };

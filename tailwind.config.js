@@ -16,5 +16,9 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('windy-radix-palette'),
+    require('@tailwindcss/typography'),
+    require('windy-radix-typography'),
+  ],
 };
