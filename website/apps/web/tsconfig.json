@@ -5,14 +5,30 @@
       {
         "name": "next"
       }
-    ]
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@/lib/*": ["./lib/*"],
+      "@/components/*": ["./components/*"],
+      "@/public/*": ["./public/*"]
+    }
   },
   "include": [
     "next-env.d.ts",
     "next.config.mjs",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "app/page.mdx"
   ],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules"],
+  "importOrder": [
+    "(^(react/(.*)$)|^(react$))|(^(next/(.*)$)|^(next$))",
+    "<THIRD_PARTY_MODULES>",
+    "^@/styles/(.*)$",
+    "^@/public/(.*)$",
+    "^@/lib/(.*)$",
+    "^@/components/(.*)$",
+    "^@/app/(.*)$"
+  ]
 }
